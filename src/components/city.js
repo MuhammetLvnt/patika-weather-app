@@ -2,7 +2,7 @@ const city = [
   { value: 1, label: "Adana" },
   { value: 2, label: "Adıyaman" },
   { value: 3, label: "Afyonkarahisar" },
-  { value: 4, label: "Afyon" },
+  { value: 4, label: "Ağrı" },
   { value: 5, label: "Amasya" },
   { value: 6, label: "Ankara" },
   { value: 7, label: "Antalya" },
