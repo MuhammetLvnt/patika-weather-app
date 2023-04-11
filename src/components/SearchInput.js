@@ -22,6 +22,7 @@ function Inputs({ setCityQuery }) {
     }
   };
 
+  // location button'a tıkladığında konumundaki hava durumunu vermesi için gereken kodlar
   const handleLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {

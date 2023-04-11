@@ -6,6 +6,7 @@ const defaultTheme = localStorage.getItem("theme") || "firstTheme";
 export const ThemeContextProvider = ({ children }) => {
   const [theme, setTheme] = useState(defaultTheme);
 
+  //butona tıkladığında localstorage de veriyi değiştirecek.
   const toggleTheme = () => {
     setTheme((prev) => (prev === "firstTheme" ? "secondTheme" : "firstTheme"));
   };
