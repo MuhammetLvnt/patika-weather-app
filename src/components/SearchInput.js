@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { UilSearch, UilLocationPoint } from "@iconscout/react-unicons";
 import Select from "react-select";
 import cities from "./city";
+import { useTheme } from "../context/ThemeContext";
 
 function Inputs({ setCityQuery }) {
+  const { toggleTheme } = useTheme();
   const [city, setCity] = useState("");
 
   // select inputundaki verinin döndürdüğü değeri city state'ine aktardım.
@@ -56,6 +58,11 @@ function Inputs({ setCityQuery }) {
           className="text-white cursor-pointer transition ease-out hover:scale-125"
           onClick={handleLocation}
         />
+      </div>
+      <div className="flex justify-end ml-5">
+        <button onClick={toggleTheme} className="border rounded-md w-28">
+          Theme
+        </button>
       </div>
     </div>
   );

@@ -1,7 +1,5 @@
 import React from "react";
 import {
-  UilArrowUp,
-  UilArrowDown,
   UilTemperature,
   UilTear,
   UilWind,
@@ -27,7 +25,7 @@ function Temperature({
 }) {
   return (
     <div>
-      <div className="flex justify-center items-center py-6 text-xl text-cyan-500">
+      <div className="flex justify-center items-center py-6 text-xl text-blue-700">
         <p>{details}</p>
       </div>
       <div className="flex flex-row items-center justify-between text-white py-3">

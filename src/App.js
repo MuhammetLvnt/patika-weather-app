@@ -4,10 +4,11 @@ import SearchInput from "./components/SearchInput";
 import Temperature from "./components/Temperature";
 import TimeAndLocation from "./components/TimeAndLocation";
 import getFormattedWeatherData from "./services/weatherService";
+import { useTheme } from "./context/ThemeContext";
 
 function App() {
   const [cityQuery, setCityQuery] = useState({ q: "antalya" });
-  const [units, setUnits] = useState("metric");
+  const [units] = useState("metric");
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
@@ -20,8 +21,16 @@ function App() {
     weatherData();
   }, [cityQuery, units]);
 
+  const { theme } = useTheme();
+
   return (
-    <div className="mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br from-cyan-700 to-blue-700 h-fit shadow-xl shadow-gray-400">
+    <div
+      className={`${
+        theme === "secondTheme"
+          ? "bg-gradient-to-r from-cyan-500 to-emerald-500"
+          : "bg-gradient-to-r from-red-500 to-yellow-500"
+      } mx-auto max-w-screen-md mt-4 py-5 px-32 h-fit shadow-xl shadow-gray-400`}
+    >
       <SearchInput setCityQuery={setCityQuery} />
 
       {weather && (
