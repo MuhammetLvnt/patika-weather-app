@@ -34,17 +34,17 @@ function Temperature({
         <div className="flex flex-col space-y-2">
           <div className="flex font-light items-center justify-center text-sm">
             <UilTemperature size={18} className="mr-1" />
-            Hissedilen :
+            Real feel :
             <span className="font-medium ml-1">{`${feels_like.toFixed()}°`}</span>
           </div>
           <div className="flex font-light items-center justify-center text-sm">
             <UilTear size={18} className="mr-1" />
-            Nem :
+            Humidity :
             <span className="font-medium ml-1">{`${humidity?.toFixed()}%`}</span>
           </div>
           <div className="flex font-light items-center justify-center text-sm">
             <UilWind size={18} className="mr-1" />
-            Rüzgar :
+            Wind :
             <span className="font-medium ml-1">{`${speed.toFixed()} km/h`}</span>
           </div>
         </div>

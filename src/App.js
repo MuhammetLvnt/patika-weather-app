@@ -7,7 +7,7 @@ import getFormattedWeatherData from "./services/weatherService";
 import { useTheme } from "./context/ThemeContext";
 
 function App() {
-  const [cityQuery, setCityQuery] = useState({ q: "antalya" });
+  const [cityQuery, setCityQuery] = useState({ q: "Antalya" });
   const [units] = useState("metric");
   const [weather, setWeather] = useState(null);
 
@@ -29,7 +29,7 @@ function App() {
         theme === "secondTheme"
           ? "bg-gradient-to-r from-cyan-500 to-emerald-500"
           : "bg-gradient-to-r from-red-500 to-yellow-500"
-      } mx-auto max-w-screen-md mt-4 py-5 px-32 h-fit shadow-xl shadow-gray-400`}
+      } mx-auto max-w-screen-md mt-4 py-5 px-32 h-fit shadow-xl shadow-gray-400 mb-5`}
     >
       <SearchInput setCityQuery={setCityQuery} />
 
@@ -37,8 +37,8 @@ function App() {
         <div>
           <TimeAndLocation weather={weather} />
           <Temperature weather={weather} />
-          <Forecast title="Saatlik Tahmin" items={weather.hourly} />
-          <Forecast title="Günlük Tahmin" items={weather.daily} />
+          <Forecast title="Hourly Forecast" items={weather.hourly} />
+          <Forecast title="Daily Forecast" items={weather.daily} />
         </div>
       )}
     </div>
